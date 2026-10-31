@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="kk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11100e">
+  <meta name="description" content="Қазақ жеріндегі Ресей империясының отарлау саясатына қарсы ұлт-азаттық көтерілістер туралы интерактивті тарихи платформа.">
+  <title>QAZAQ RESISTANCE — Тарихи платформа</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="config.js"></script>
+</head>
+<body>
+  <div class="site-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Негізгі навигация">
+      <a class="brand" href="#home" data-page="home"><span class="brand-mark">Қ</span><span>QAZAQ<br><b>RESISTANCE</b></span></a>
+      <div class="nav-caption">ЗЕРТТЕУ БӨЛІМДЕРІ</div>
+      <nav class="nav-list">
+        <a href="#home" data-page="home" class="nav-link active"><span>⌂</span> Басты бет</a>
+        <a href="#uprisings" data-page="uprisings" class="nav-link"><span>⚔</span> Көтерілістер</a>
+        <a href="#timeline" data-page="timeline" class="nav-link"><span>◷</span> Хронология</a>
+        <a href="#map" data-page="map" class="nav-link"><span>⌖</span> Тарихи карта</a>
+        <a href="#theses" data-page="theses" class="nav-link"><span>✳</span> 10 тезис</a>
+        <a href="#facts" data-page="facts" class="nav-link"><span>▤</span> 30 тарихи факт</a>
+        <a href="#people" data-page="people" class="nav-link"><span>◉</span> Тарихи тұлғалар</a>
+        <a href="#videos" data-page="videos" class="nav-link"><span>▷</span> Бейнематериалдар</a>
+        <a href="#interview" data-page="interview" class="nav-link"><span>✦</span> Тарихпен сұхбат</a>
+        <a href="#surveys" data-page="surveys" class="nav-link"><span>☷</span> Сауалнамалар</a>
+        <a href="#results" data-page="results" class="nav-link"><span>▥</span> Нәтижелер</a>
+      </nav>
+      <div class="sidebar-foot"><span class="live-dot"></span> ТАРИХИ БІЛІМ ПЛАТФОРМАСЫ<br><small>Дереккөздер әр материалдың ішінде</small></div>
+    </aside>
+    <main class="main-content">
+      <header class="mobile-header"><button class="menu-toggle" id="menu-toggle" aria-label="Мәзірді ашу">☰</button><a href="#home" class="mobile-brand">QAZAQ <b>RESISTANCE</b></a><span class="mobile-seal">Қ</span></header>
+      <div class="page-wrap">
+        <section class="page active" id="page-home" data-title="Басты бет">
+          <div class="hero">
+            <div class="hero-text"><span class="eyebrow"><i></i> ТАРИХИ ЗЕРТТЕУ • XVIII–XX ҒАСЫР</span><h1>Азаттыққа<br><em>ұмтылған</em><br>дала тарихы</h1><p>Қазақ жеріндегі Ресей империясының отарлау саясатына қарсы көтерілістерді дерек, тұлға және тарихи кеңістік арқылы зерттеңіз.</p><a class="button button-gold" href="#uprisings" data-page="uprisings">Тарихты зерттеу <span>↗</span></a><div class="hero-note"><span>01 / 06</span><span>Қазақ даласындағы қарсылық қозғалыстары</span></div></div>
+            <div class="hero-art" aria-label="Дала мен тарихи карта өрнегінен құралған көркем көрініс"><div class="sun"></div><div class="hero-map-lines"></div><div class="rider-shadow">✦</div><div class="hero-quote">«Ел үшін туған ер<br>ел үшін еңбек етер»<small>— халық даналығы</small></div><div class="hero-stamp">ТАРИХ<br>1783—1916</div></div>
+          </div>
+          <div class="section-heading compact"><div><span class="eyebrow">ПЛАТФОРМАНЫ ШОЛУ</span><h2>Тарихқа бір көзқарас</h2></div><p>Қазақ қоғамының еркіндігі мен жерін қорғау жолындағы күрес кезеңдері.</p></div>
+          <div class="stats-grid" id="home-stats"></div>
+          <div class="home-feature"><div><span class="eyebrow">ТАҢДАЛҒАН ТАҚЫРЫП</span><h3>Кенесары Қасымұлы бастаған қозғалыс</h3><p>1837–1847 жылдары үш жүздің кең аумағын қамтыған қозғалыс патша билігінің бекініс салуы мен хандық басқаруды жоюына қарсы бағытталды.</p><a href="#uprisings" data-page="uprisings" class="text-link" data-event="kenesary">Толығырақ оқу <span>→</span></a></div><div class="feature-seal">1837<br><b>—</b><br>1847</div></div>
+          <div class="sources-line">Материалдар Қазақстан тарихы порталы мен ғылыми жарияланымдарға сүйенеді. <a href="#sources" data-page="sources">Дереккөздер тізімі →</a></div>
+        </section>
+
+        <section class="page" id="page-uprisings" data-title="Көтерілістер"><div class="page-top"><div><span class="eyebrow">ҚОЗҒАЛЫСТАР КАРТАСЫ</span><h1>Ұлт-азаттық көтерілістер</h1><p>Әр кезеңді ашып, алғышартынан тарихи маңызына дейін танысыңыз.</p></div><div class="count-badge">06 <small>қозғалыс</small></div></div><div class="uprising-grid" id="uprising-grid"></div></section>
+        <section class="page" id="page-timeline" data-title="Хронология"><div class="page-top"><div><span class="eyebrow">УАҚЫТ БЕЛДЕУІ</span><h1>Қарсылық хронологиясы</h1><p>1783 жылдан 1916 жылға дейінгі негізгі кезеңдер.</p></div></div><div class="timeline" id="timeline-list"></div></section>
+        <section class="page" id="page-map" data-title="Тарихи карта"><div class="page-top"><div><span class="eyebrow">ТАРИХИ ГЕОГРАФИЯ</span><h1>Көтерілістер картасы</h1><p>Белгілер тарихи қозғалыстардың шамамен орналасқан аймағын көрсетеді; олар қазіргі әкімшілік шекараны білдірмейді.</p></div></div><div class="map-legend"><span><i class="legend-dot red"></i> XVIII ғасыр</span><span><i class="legend-dot gold"></i> XIX ғасыр</span><span><i class="legend-dot ivory"></i> XX ғасыр</span></div><div id="history-map" class="history-map"></div><div class="map-caption">Аймақтар — тарихи деректерге сүйенген жалпылама нүктелер. Шекаралар иллюстрациялық GeoJSON арқылы берілген.</div></section>
+        <section class="page" id="page-theses" data-title="10 тезис"><div class="page-top"><div><span class="eyebrow">ТҮЙІНДІ ОЙЛАР</span><h1>10 тарихи тезис</h1><p>Отарлау саясаты мен қарсылық қозғалыстарын түсінуге көмектесетін тұжырымдар.</p></div></div><div class="thesis-list" id="thesis-list"></div></section>
+        <section class="page" id="page-facts" data-title="30 тарихи факт"><div class="page-top"><div><span class="eyebrow">ДӘЙЕКТЕР ЖИНАҒЫ</span><h1>30 тарихи факт</h1><p>Фильтрден ғасырды таңдаңыз. Әр дереккөз жаңа бетте ашылады.</p></div></div><div class="filter-row" id="fact-filters"><button class="filter-chip selected" data-century="all">Барлығы</button><button class="filter-chip" data-century="XVIII">XVIII ғасыр</button><button class="filter-chip" data-century="XIX">XIX ғасыр</button><button class="filter-chip" data-century="XX">XX ғасыр</button></div><div class="facts-grid" id="facts-grid"></div></section>
+        <section class="page" id="page-people" data-title="Тарихи тұлғалар"><div class="page-top"><div><span class="eyebrow">ҚОЗҒАЛЫС КӨШБАСШЫЛАРЫ</span><h1>Тарихи тұлғалар</h1><p>Карточканы ашып, өмір жолы мен қозғалыстағы рөлін оқыңыз. Кейіпкерлердің бейнелері көркем реконструкция ретінде белгіленеді.</p></div><div class="count-badge">10 <small>тұлға</small></div></div><div class="people-grid" id="people-grid"></div></section>
+        <section class="page" id="page-videos" data-title="Бейнематериалдар"><div class="page-top"><div><span class="eyebrow">КӨРУ ЖӘНЕ ТАЛДАУ</span><h1>Тарихи бейнематериалдар</h1><p>Тақырыпқа сай ашық YouTube материалдары. Сыртқы платформадағы қолжетімділік өзгеруі мүмкін.</p></div></div><div class="video-grid" id="video-grid"></div></section>
+        <section class="page" id="page-interview" data-title="Тарихпен сұхбат"><div class="page-top"><div><span class="eyebrow">AI ТАРИХИ РЕКОНСТРУКЦИЯ</span><h1>Тарихпен сұхбат</h1><p>Тарихи тұлғалардың дәуірі мен көзқарасын таныстыратын бейнежоба.</p></div></div><div class="interview-card"><div class="interview-art"><div class="interview-orbit"></div><div class="interview-silhouette">Қ</div><span>VIDEO PROJECT / 2026</span></div><div class="interview-copy"><span class="status-pill">ЖАҚЫНДА ЖАРИЯЛАНАДЫ</span><h2>Өткен заманмен тілдесу</h2><p>AI арқылы дайындалатын тарихи сұхбат видеосы әзірленіп жатыр. Жарияланған соң бұл жерде MP4 файл немесе YouTube видеосы көрсетіледі.</p><p class="note-box">Бұл материал көркем тарихи реконструкция ретінде белгіленеді. Кейіпкердің үні мен диалогы тарихи құжаттың орнына жүрмейді.</p><div class="video-placeholder">▷ <span>Бейне дайын болғанда ойнатқыш осында пайда болады</span></div></div></div></section>
+        <section class="page" id="page-surveys" data-title="Сауалнамалар"><div class="page-top"><div><span class="eyebrow">ЗЕРТТЕУГЕ ҚАТЫСУ</span><h1>Интерактивті сауалнамалар</h1><p>Әр сауалнамада 10 сұрақ бар. Жеке пікір сұрақтары бағаланбайды; жауаптар зерттеу қорытындысына пайдаланылады.</p></div><div class="count-badge">05 <small>сауалнама</small></div></div><div id="survey-list" class="survey-list"></div><div id="survey-runner" class="survey-runner hidden"></div></section>
+        <section class="page" id="page-results" data-title="Нәтижелер"><div class="page-top"><div><span class="eyebrow">ЖИНАҚТАЛҒАН ДЕРЕК</span><h1>Сауалнама нәтижелері</h1><p>Тек жиынтық статистика көрсетіледі. Ашық жауаптар жария бетте көрсетілмейді.</p></div><button class="button button-outline" id="refresh-results">Жаңарту ↻</button></div><div id="results-summary" class="results-summary"></div><div id="results-charts" class="results-charts"></div><div class="privacy-note">Пайыз әр нұсқаны таңдаған қатысушылардың үлесін көрсетеді. Бірнеше жауапты сұрақта пайыздар қосындысы 100%-дан асуы мүмкін. Ашық мәтін жауаптары тек Supabase әкімшілік сұрауы арқылы қолжетімді; сайтта аты-жөн және байланыс деректері сұралмайды.</div></section>
+        <section class="page" id="page-sources" data-title="Дереккөздер"><div class="page-top"><div><span class="eyebrow">ПАЙДАЛАНЫЛҒАН ӘДЕБИЕТ</span><h1>Дереккөздер мен ескертпелер</h1><p>Ғылыми және институционалдық жарияланымдарға басымдық берілді. Тарихи бағалаудағы пікір айырмашылықтары ескерілді.</p></div></div><div id="sources-list" class="sources-list"></div></section>
+        <footer class="site-footer"><span>QAZAQ RESISTANCE <small>Оқу жобасы • 2026</small></span><a href="#sources" data-page="sources">Дереккөздер мен әдістемелік ескерту</a></footer>
+      </div>
+    </main>
+  </div>
+  <div class="modal" id="content-modal" aria-hidden="true"><div class="modal-backdrop" data-close="modal"></div><article class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="modal-close" data-close="modal" aria-label="Жабу">×</button><div id="modal-body"></div></article></div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  <script src="js/app.js" type="module"></script>
+</body>
+</html>
